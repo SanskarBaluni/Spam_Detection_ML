@@ -1,6 +1,6 @@
 import string
 import nltk
-nltk.download('punkt')
+nltk.download('wordnet')
 import streamlit as st
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
