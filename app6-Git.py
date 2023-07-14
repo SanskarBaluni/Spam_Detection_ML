@@ -44,7 +44,7 @@ tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
 model = pickle.load(open('model.pkl', 'rb'))
 st.title("     _____Email/SMS Spam Detector     ")
 input_sms = st.text_area('', placeholder="Enter the sms/email here")
-if st.button('PREDICT'):
+if st.button('PREDICT',use_container_width=True):
     # 1.preprocess
     transformed_sms = transform_text(input_sms)
     # 2.vectorize
