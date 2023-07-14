@@ -1,6 +1,5 @@
 import string
 import nltk
-nltk.download('stopwords')
 import streamlit as st
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
@@ -8,11 +7,10 @@ import pickle
 
 ps = PorterStemmer()
 
-
 st.markdown("""
     <style>
         .stApp {
-        background: url("https://postaga.com/wp-content/webpc-passthru.php?src=https://postaga.com/wp-content/uploads/2021/12/spam-guide-cover-1536x1024.jpg&nocache=1");
+        background: url("https://easydmarc.com/blog/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2022/03/Why-is-DMARC-Failing.jpg.webp");
         background-size: cover;
         }
     </style>""", unsafe_allow_html=True)
@@ -40,11 +38,11 @@ def transform_text(text):
     return " ".join(y)
 
 
-tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
-model = pickle.load(open('model.pkl', 'rb'))
-st.title("     _____Email/SMS Spam Detector     ")
+tfidf = pickle.load(open('C:/Users/balun/PycharmProjects/Email-Spam-Classification/vectorizer.pkl', 'rb'))
+model = pickle.load(open('C:/Users/balun/PycharmProjects/Email-Spam-Classification/model.pkl', 'rb'))
+st.markdown("<h1 style='text-align: center;'>Email/SMS Spam Detector</h1>", unsafe_allow_html=True)
 input_sms = st.text_area('', placeholder="Enter the sms/email here")
-if st.button('PREDICT',use_container_width=True):
+if st.button('PREDICT', use_container_width=True):
     # 1.preprocess
     transformed_sms = transform_text(input_sms)
     # 2.vectorize
@@ -53,6 +51,6 @@ if st.button('PREDICT',use_container_width=True):
     result = model.predict(vector_input)[0]
     # 4.Display
     if result == 1:
-        st.header("**Spam**")
+        st.markdown("<h1 style='text-align: center;'>SPAM</h1>", unsafe_allow_html=True)
     else:
-        st.header("**Not Spam**")
+        st.markdown("<h1 style='text-align: center;'>NOT SPAM</h1>", unsafe_allow_html=True)
