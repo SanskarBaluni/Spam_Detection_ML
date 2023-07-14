@@ -38,8 +38,8 @@ def transform_text(text):
     return " ".join(y)
 
 
-tfidf = pickle.load(open('C:/Users/balun/PycharmProjects/Email-Spam-Classification/vectorizer.pkl', 'rb'))
-model = pickle.load(open('C:/Users/balun/PycharmProjects/Email-Spam-Classification/model.pkl', 'rb'))
+tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
+model = pickle.load(open('model.pkl', 'rb'))
 st.markdown("<h1 style='text-align: center;'>Email/SMS Spam Detector</h1>", unsafe_allow_html=True)
 input_sms = st.text_area('', placeholder="Enter the sms/email here")
 if st.button('PREDICT', use_container_width=True):
