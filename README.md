@@ -32,3 +32,17 @@ The following Python libraries were used for implementing the Email Spam Classif
 ## CountVectorizer Functionality
 
 CountVectorizer converts a collection of text documents into a matrix of token counts. This implementation produces a sparse representation of the counts using scipy.sparse.csr_matrix. If an a-priori dictionary is not provided and no feature selection is performed by the analyzer, the number of features will be equal to the vocabulary size found by analyzing the data.
+
+  
+## Usage
+
+1. Run the web app:
+<pre>
+streamlit run app-Git.py
+</pre>
+
+2. Open your web browser and go to `http://localhost:8501` to access the web app.
+
+3. Input the sms which needs to be classified.
+
+4. Click on the **Predict** button to generate the prediction result.
