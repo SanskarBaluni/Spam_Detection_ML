@@ -32,13 +32,3 @@ The following Python libraries were used for implementing the Email Spam Classif
 ## CountVectorizer Functionality
 
 CountVectorizer converts a collection of text documents into a matrix of token counts. This implementation produces a sparse representation of the counts using scipy.sparse.csr_matrix. If an a-priori dictionary is not provided and no feature selection is performed by the analyzer, the number of features will be equal to the vocabulary size found by analyzing the data.
-
-## Getting Started
-
-To use the Email Spam Classifier in your own project:
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/email-spam-classifier.git
-cd email-spam-classifier
