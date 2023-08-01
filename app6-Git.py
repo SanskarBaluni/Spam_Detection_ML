@@ -6,6 +6,8 @@ from nltk.stem.porter import PorterStemmer
 import pickle
 
 ps = PorterStemmer()
+nltk.download('punkt')
+nltk.download('stopwords')
 
 st.markdown("""
     <style>
