@@ -1,4 +1,5 @@
 # Email Spam Classifier
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ## Goal
 
@@ -23,6 +24,11 @@ The NLTK library was used to filter words in the email subject text. NLTK provid
 ## Understanding Naive Bayes
 
 Naive Bayes is a classification technique based on Bayes' Theorem with an assumption of independence among predictors. In simple terms, a Naive Bayes classifier assumes that the presence of a particular feature in a class is unrelated to the presence of any other feature.
+
+## Web App
+
+- [Access the Web App](https://spamdetectionml-sanskar.streamlit.app/) - Use the web app to predict multiple diseases.
+
 
 ## Python Libraries Used
 
@@ -50,3 +56,9 @@ streamlit run app-Git.py
 3. Input the sms which needs to be classified.
 
 4. Click on the **Predict** button to generate the prediction result.
+
+## License
+
+*This project is licensed under the [MIT License](LICENSE).*
+
+---
